@@ -1,0 +1,12 @@
+<templateSet group="iterations">
+  <template name="forij" value="for(int $INDEX1$ = 0; $INDEX1$ &lt; $LIMIT1$; $INDEX1$++) {&#10;  for(int $INDEX2$ = 0; $INDEX2$ &lt; $LIMIT2$; $INDEX2$++) {&#10;    $END$&#10;  }&#10;}" description="Create nested iteration loop" toReformat="true" toShortenFQNames="true">
+    <variable name="INDEX1" expression="suggestIndexName()" defaultValue="" alwaysStopAt="true" />
+    <variable name="LIMIT1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="INDEX2" expression="suggestIndexName()" defaultValue="" alwaysStopAt="true" />
+    <variable name="LIMIT2" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="GROOVY_STATEMENT" value="true" />
+    </context>
+  </template>
+</templateSet>
