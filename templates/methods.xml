@@ -1,0 +1,34 @@
+<templateSet group="methods">
+  <template name="getset" value="private $TYPE$ $NAME$;&#10;&#10;public $TYPE$ get$CNAME$() {&#10;&#9;return $NAME$;&#10;}&#10;&#10;public void set$CNAME$($TYPE$ $ARG$) {&#10;&#9;this.$NAME$ = $ARG$;&#10;}&#10;&#10;$END$" description="Create private variable with getter and setter" toReformat="true" toShortenFQNames="true">
+    <variable name="TYPE" expression="" defaultValue="&quot;type&quot;" alwaysStopAt="true" />
+    <variable name="NAME" expression="" defaultValue="&quot;name&quot;" alwaysStopAt="true" />
+    <variable name="CNAME" expression="capitalize(NAME)" defaultValue="" alwaysStopAt="false" />
+    <variable name="ARG" expression="camelCase(TYPE)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="get" value="private $TYPE$ $NAME$;&#10;&#10;public $TYPE$ get$CNAME$() {&#10;&#9;return $NAME$;&#10;}&#10;&#10;$END$" description="Create private variable with getter" toReformat="false" toShortenFQNames="true">
+    <variable name="TYPE" expression="" defaultValue="&quot;type&quot;" alwaysStopAt="true" />
+    <variable name="NAME" expression="" defaultValue="&quot;name&quot;" alwaysStopAt="true" />
+    <variable name="CNAME" expression="capitalize(NAME)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="set" value="private $TYPE$ $NAME$;&#10;&#10;public void set$CNAME$($TYPE$ $ARG$) {&#10;&#9;this.$NAME$ = $ARG$;&#10;}&#10;&#10;$END$" description="Create private variable with setter" toReformat="true" toShortenFQNames="true">
+    <variable name="TYPE" expression="" defaultValue="&quot;type&quot;" alwaysStopAt="true" />
+    <variable name="NAME" expression="" defaultValue="&quot;name&quot;" alwaysStopAt="true" />
+    <variable name="CNAME" expression="capitalize(NAME)" defaultValue="" alwaysStopAt="false" />
+    <variable name="ARG" expression="camelCase(TYPE)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="time" value="$time$" toReformat="false" toShortenFQNames="true">
+    <variable name="time" expression="date()" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+</templateSet>
